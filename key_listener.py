@@ -7,6 +7,6 @@ class KeyListener:
     def on_Shortcut(self):
         print("Auto Clicker is running")
 
-# example usage:
-#keyboard.add_hotkey("ctrl+shift+a", on_hotkey)
-#keyboard.wait("esc")
+    def start_listener(self):
+        keyboard.add_hotkey("ctrl+shift+a", self.on_Shortcut)
+        keyboard.wait("esc")
