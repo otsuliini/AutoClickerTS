@@ -1,7 +1,7 @@
 import pyautogui
 import threading
 import time
-
+import config
 class Clicker:
     def __init__(self):
         self.clicking = False
@@ -21,4 +21,4 @@ class Clicker:
     def _click(self):
         while self.clicking:
             pyautogui.click()
-            time.sleep(0.1)  # Adjust the interval as needed
+            time.sleep(config.Config.clickinterval)  # Adjust the interval as needed
