@@ -6,6 +6,7 @@ import time
 import keyboard
 
 def main():
+    config.Config.setConfig()  # Now calling setConfig as a static method
     clicker_instance = clicker.Clicker()
     key_listener_instance = key_listener.KeyListener()
     keyboard.add_hotkey("f6", clicker_instance.start_clicking)
